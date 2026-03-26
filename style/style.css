@@ -1,0 +1,378 @@
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    background: radial-gradient(circle at 10% 20%, #0a0a0f, #030305);
+    font-family: 'Inter', sans-serif;
+    color: #f0f0f0;
+    line-height: 1.5;
+    scroll-behavior: smooth;
+}
+
+.container {
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem 0;
+    flex-wrap: wrap;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.logo {
+    font-size: 1.8rem;
+    font-weight: 800;
+    background: linear-gradient(135deg, #fff, #c084fc);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    letter-spacing: -0.02em;
+}
+
+.logo i {
+    background: none;
+    -webkit-background-clip: unset;
+    background-clip: unset;
+    color: #c084fc;
+    margin-right: 6px;
+}
+
+.nav-links {
+    display: flex;
+    gap: 2rem;
+    list-style: none;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #e0e0e0;
+    font-weight: 500;
+    transition: 0.3s;
+    font-size: 1rem;
+}
+
+.nav-links a:hover {
+    color: #c084fc;
+    text-shadow: 0 0 5px rgba(192, 132, 252, 0.5);
+}
+
+.hero {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 3rem;
+    padding: 3rem 0 4rem 0;
+}
+
+.hero-content {
+    flex: 1.2;
+}
+
+.hero-badge {
+    display: inline-block;
+    background: rgba(192, 132, 252, 0.2);
+    backdrop-filter: blur(4px);
+    padding: 0.3rem 1rem;
+    border-radius: 40px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: #c084fc;
+    margin-bottom: 1.2rem;
+    border: 1px solid rgba(192, 132, 252, 0.3);
+}
+
+.hero-content h1 {
+    font-size: 3.8rem;
+    font-weight: 800;
+    line-height: 1.2;
+    background: linear-gradient(to right, #ffffff, #d9b4ff);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    margin-bottom: 1.2rem;
+}
+
+.hero-content p {
+    font-size: 1.2rem;
+    color: #b0b0c0;
+    max-width: 550px;
+    margin-bottom: 2rem;
+}
+
+.btn-group {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.btn-primary,
+.btn-outline {
+    padding: 0.9rem 2rem;
+    border-radius: 50px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: 0.25s;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.6rem;
+    font-size: 0.95rem;
+}
+
+.btn-primary {
+    background: linear-gradient(95deg, #a855f7, #7c3aed);
+    color: white;
+    border: none;
+    box-shadow: 0 8px 20px rgba(124, 58, 237, 0.3);
+}
+
+.btn-primary:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 15px 30px rgba(124, 58, 237, 0.5);
+}
+
+.btn-outline {
+    border: 1.5px solid rgba(192, 132, 252, 0.6);
+    color: #e2e2ff;
+    background: transparent;
+}
+
+.btn-outline:hover {
+    background: rgba(192, 132, 252, 0.1);
+    border-color: #c084fc;
+}
+
+/* фото диджея */
+.hero-image {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.image-frame {
+    position: relative;
+    width: 100%;
+    max-width: 380px;
+    border-radius: 32px;
+    background: linear-gradient(145deg, #2a2a3a, #0e0e16);
+    padding: 8px;
+    box-shadow: 0 25px 40px rgba(0, 0, 0, 0.5), 0 0 0 1px rgba(192, 132, 252, 0.2);
+}
+
+.image-frame img {
+    width: 100%;
+    height: auto;
+    border-radius: 26px;
+    display: block;
+    object-fit: cover;
+    aspect-ratio: 1 / 1;
+    filter: grayscale(10%) contrast(1.05);
+    transition: transform 0.4s ease;
+}
+
+.image-frame:hover img {
+    transform: scale(1.01);
+}
+
+/* секция треков (портфолио треков) */
+.tracks-section {
+    padding: 5rem 0;
+}
+
+.section-header {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.section-header h2 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    background: linear-gradient(120deg, #ffffff, #cfaaff);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+.section-header p {
+    color: #9ca3af;
+    margin-top: 0.5rem;
+}
+
+.tracks-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 1.8rem;
+}
+
+.track-card {
+    background: rgba(20, 20, 30, 0.7);
+    backdrop-filter: blur(8px);
+    border-radius: 28px;
+    padding: 1.5rem;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    transition: all 0.3s;
+    cursor: pointer;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+.track-card:hover {
+    transform: translateY(-6px);
+    border-color: rgba(192, 132, 252, 0.4);
+    background: rgba(30, 25, 45, 0.8);
+    box-shadow: 0 20px 30px -10px rgba(124, 58, 237, 0.3);
+}
+
+.track-icon {
+    font-size: 2.2rem;
+    color: #c084fc;
+    margin-bottom: 1rem;
+}
+
+.track-title {
+    font-size: 1.4rem;
+    font-weight: 700;
+    margin-bottom: 0.3rem;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.track-meta {
+    font-size: 0.8rem;
+    color: #a78bfa;
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.audio-player {
+    width: 100%;
+    margin: 1rem 0 0.5rem;
+}
+
+audio {
+    width: 100%;
+    border-radius: 40px;
+    outline: none;
+}
+
+audio::-webkit-media-controls-panel {
+    background-color: #1e1e2a;
+}
+
+.track-duration {
+    font-size: 0.75rem;
+    color: #aaa;
+    text-align: right;
+}
+
+.no-tracks {
+    text-align: center;
+    padding: 3rem;
+    background: rgba(0, 0, 0, 0.3);
+    border-radius: 2rem;
+    color: #aaa;
+    font-style: italic;
+}
+
+/* цитата / соц. блок */
+.quote-block {
+    margin: 4rem 0 2rem;
+    text-align: center;
+    padding: 2rem;
+    background: rgba(192, 132, 252, 0.05);
+    border-radius: 50px;
+    border-left: 4px solid #c084fc;
+}
+
+.quote-block i {
+    font-size: 2rem;
+    color: #c084fc;
+    opacity: 0.7;
+}
+
+.quote-text {
+    font-size: 1.4rem;
+    font-weight: 400;
+    max-width: 700px;
+    margin: 0.5rem auto;
+}
+
+footer {
+    margin-top: 4rem;
+    padding: 2rem 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+    text-align: center;
+    color: #7e7e8c;
+    font-size: 0.85rem;
+}
+
+/*Адаптив*/
+
+@media (max-width: 850px) {
+    .hero {
+        flex-direction: column-reverse;
+        text-align: center;
+    }
+
+    .hero-content h1 {
+        font-size: 2.5rem;
+    }
+
+    .hero-content p {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .btn-group {
+        justify-content: center;
+    }
+
+    .navbar {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .container {
+        padding: 0 1.5rem;
+    }
+
+    .section-header h2 {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .tracks-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .quote-text {
+        font-size: 1.1rem;
+    }
+}
+
+::-webkit-scrollbar {
+    width: 6px;
+}
+
+::-webkit-scrollbar-track {
+    background: #0a0a0f;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #c084fc;
+    border-radius: 10px;
+}

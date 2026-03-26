@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+        <title>DJ Olow</title>
+        <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,600;14..32,700;14..32,800&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+        <link rel="stylesheet" href="./style/normalize.css">
+        <link rel="stylesheet" href="./style/style.css">
+    </head>
+
+    <body>
+
+        <div class="container">
+            <nav class="navbar">
+                <div class="logo">
+                    <i class="fas fa-headphones"></i> DJ Olow
+                </div>
+                <ul class="nav-links">
+                    <li><a href="#home">Главная</a></li>
+                    <li><a href="#tracks">Треки</a></li>
+                    <li><a href="#contact" id="contactLink">Контакты</a></li>
+                </ul>
+            </nav>
+
+            <section id="home">
+                <div class="hero">
+                    <div class="hero-content">
+                        <span class="hero-badge"><i class="fas fa-bolt"></i> Музыка это душа:)</span>
+                        <h1>Звук, который<br>заставляет дышать</h1>
+                        <p>Электронная магия, глубокие басы и уникальные сеты. <br>DJ Olow — музыкальный опыт за пределами реальности.</p>
+                        <div class="btn-group">
+                            <a href="#tracks" class="btn-primary"><i class="fas fa-play-circle"></i> Слушать треки</a>
+                            <a href="#" id="bookingBtn" class="btn-outline"><i class="fas fa-calendar-alt"></i> Забронировать</a>
+                        </div>
+                    </div>
+                    <div class="hero-image">
+                        <div class="image-frame">
+                            <img id="djPhoto" src="./image/dj.jpg" alt="DJ Olow">
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Секция треков-портфолио -->
+            <section id="tracks" class="tracks-section">
+                <div class="section-header">
+                    <h2><i class="fas fa-music"></i> Трек-портфолио</h2>
+                    <p>Мои авторские работы, ремиксы и сеты — слушай и вдохновляйся</p>
+                </div>
+                <div id="tracksContainer" class="tracks-grid">
+                    <!-- динамическая загрузка треков из папки /tracks/ -->
+                    <div class="no-tracks"><i class="fas fa-spinner fa-pulse"></i> Загрузка треков...</div>
+                </div>
+            </section>
+
+            <!-- вдохновляющий блок текста -->
+            <div class="quote-block">
+                <i class="fas fa-quote-left"></i>
+                <div class="quote-text">“Музыка — это не просто звук, это мост между душами. Каждый трек — история, каждый микс — путешествие.”</div>
+            </div>
+
+            <footer id="contact">
+                <div style="margin-bottom: 10px;">
+                    <i class="fa-brands fa-vk"></i> 
+                    <span style="margin:0 12px;">|</span> 
+                    <i class="fa-brands fa-yandex-international"></i>
+                </div>
+                <p>&#169; 2026 DJ Olow — Портфолио диджея. Все треки являются собственностью артиста.</p>
+            </footer>
+        </div>
+
+        <script src="./js/app.js"></script>
+    </body>
+</html>
