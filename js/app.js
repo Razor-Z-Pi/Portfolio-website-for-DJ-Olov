@@ -18,7 +18,7 @@ const TRACK_DESCRIPTIONS = {
 };
 
 async function autoDetectTracks() {
-    console.log('🔍 Автоматический поиск треков в папке tracks/...');
+    console.log('Автоматический поиск треков в папке tracks/...');
     
     const commonNames = TRACKS_LIST.length > 0 ? TRACKS_LIST : [];
     const foundTracks = [];
